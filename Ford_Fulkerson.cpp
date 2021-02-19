@@ -4,9 +4,21 @@ typedef long long ll;
 
 using namespace std;
 
-int v, e, max_flow= 0;
-int grph[10][10];
-int res[10][10];
+int v=6, e=10, max_flow= 0;
+int grph[10][10]= { {0, 16, 13, 0, 0, 0}, 
+                    {0, 0, 10, 12, 0, 0}, 
+                    {0, 4, 0, 0, 14, 0}, 
+                    {0, 0, 9, 0, 0, 20}, 
+                    {0, 0, 0, 7, 0, 4}, 
+                    {0, 0, 0, 0, 0, 0} 
+                    };
+int res[10][10]={ {0, 16, 13, 0, 0, 0}, 
+                {0, 0, 10, 12, 0, 0}, 
+                {0, 4, 0, 0, 14, 0}, 
+                {0, 0, 9, 0, 0, 20}, 
+                {0, 0, 0, 7, 0, 4}, 
+                {0, 0, 0, 0, 0, 0} 
+                }; 
 int flow[10][10];
 int parent[10];
 
@@ -39,19 +51,19 @@ bool bfs(int s, int t)
 
 int main()
 {
-    cin>> v>> e;
+    // cin>> v>> e;
     int s, d, w;
 
 
-    memset(grph, 0, sizeof grph);
+    // memset(grph, 0, sizeof grph);
     memset(flow, 0, sizeof flow);
 
-    for(int i=0; i<e; i++)
-    {
-        cin>> s>> d>> w;
-        grph[s][d]= w;
-        res[s][d]= w;
-    }
+    // for(int i=0; i<e; i++)
+    // {
+    //     cin>> s>> d>> w;
+    //     grph[s][d]= w;
+    //     res[s][d]= w;
+    // }
 
     while(bfs(0, v-1))
     {
@@ -73,5 +85,5 @@ int main()
         max_flow+=pflow;
     }
 
-    cout<< max_flow<< '\n';
+    cout<< "Max Flow: "<<max_flow<< '\n';
 }
