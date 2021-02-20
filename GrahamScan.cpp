@@ -112,9 +112,9 @@ int main()
     int n=8;
     vector<piin>points;
     // uncomment the "input()" function for custom input
-    // input(n, points);
-    points= {{0, 3}, {1, 1}, {2, 2}, {4, 4}, 
-            {0, 0}, {1, 2}, {3, 1}, {3, 3}};
+    input(n, points);
+    // points= {{0, 3}, {1, 1}, {2, 2}, {4, 4}, 
+    //         {0, 0}, {1, 2}, {3, 1}, {3, 3}};
 
     stack<piin> ans= convexHull(points, points.size());
 

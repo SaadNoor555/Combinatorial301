@@ -58,12 +58,12 @@ string prntans(bool val)
 int main()
 {
     
-    p1= {2, 0};
-    p2= {1, 1};
-    q1= {2, 2};
-    q2= {0, 2};
+    // p1= {2, 0};
+    // p2= {1, 1};
+    // q1= {2, 2};
+    // q2= {0, 2};
 
-    // input();
+    input();
 
     cout<< "Given Segments" <<prntans(intersect())<< "intersect\n";
     
